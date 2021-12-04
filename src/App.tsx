@@ -8,6 +8,27 @@ const App: React.FunctionComponent = () => {
 		if (localStorage.getItem('dark_mode'))
 			document.documentElement.classList.add('dark');
 
+		let primaryColor: string | null;
+		if ((primaryColor = localStorage.getItem('primary_color')))
+			document.documentElement.style.setProperty(
+				'--primary-color',
+				primaryColor
+			);
+
+		let fontStyle: string | null;
+		if ((fontStyle = localStorage.getItem('font_style'))) {
+			if (fontStyle == 'sans') {
+				document.documentElement.style.setProperty('--font-style', 'Inter');
+			} else if (fontStyle == 'serif') {
+				document.documentElement.style.setProperty(
+					'--font-style',
+					'Times New Roman'
+				);
+			} else if (fontStyle == 'mono') {
+				document.documentElement.style.setProperty('--font-style', 'monospace');
+			}
+		}
+
 		return () => {};
 	});
 

@@ -6,6 +6,7 @@
 
 :root {
 	--primary-color: #34a4c7;
+	--font-style: 'Inter';
 }
 
 @layer base {
@@ -15,8 +16,9 @@
 			'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
 			sans-serif; */
 
-		font-family: 'Inter';
+		font-family: var(--font-style);
 		font-weight: medium;
+		text-size: 16px;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 
@@ -65,7 +67,11 @@
 	}
 
 	input[type='color'] {
-		@apply border-text4col border rounded text-text2col dark:text-text2col-dark bg-background dark:bg-background-dark;
+		@apply border-text4col h-10 p-2 border rounded text-text2col dark:text-text2col-dark bg-background dark:bg-background-dark;
+	}
+
+	input[type='color']::-webkit-color-swatch {
+		@apply h-full;
 	}
 
 	input[type='search']:focus {
@@ -75,7 +81,7 @@
 	input[type='checkbox'],
 	input[type='radio'] {
 		cursor: pointer;
-		@apply w-5 h-5 text-text2col dark:text-text2col-dark bg-background dark:bg-background-dark;
+		@apply w-7 h-7 text-text2col dark:text-text2col-dark bg-background dark:bg-background-dark;
 	}
 
 	label {

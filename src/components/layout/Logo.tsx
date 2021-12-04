@@ -21,8 +21,8 @@ export const Logo: React.FunctionComponent = ({}) => (
 					x2="10.0398"
 					y2="32.7484"
 					gradientUnits="userSpaceOnUse">
-					<stop stop-color="#5AC7EA" />
-					<stop offset="1" stop-color="#34A4C7" />
+					<stop stopColor={'var(--primary-color)'} />
+					<stop offset="1" stopColor={'var(--primary-color)'} />
 				</linearGradient>
 			</defs>
 		</svg>
