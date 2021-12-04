@@ -18,7 +18,7 @@ export const HotThread: React.FunctionComponent<Props> = ({
 	<article className="flex gap-2">
 		<div className="w-28 h-28 bg-text3col-dark"></div>
 		<div className="flex flex-col">
-			<h3 className="font-bold">{title}</h3>
+			<h3 className="font-bold text-textcol dark:text-textcol-dark">{title}</h3>
 			<a
 				className="text-primary font-bold"
 				href="http://"
@@ -26,8 +26,8 @@ export const HotThread: React.FunctionComponent<Props> = ({
 				rel="noopener noreferrer">
 				{board}
 			</a>
-			<p>{desc}</p>
-			<div className="mt-auto flex gap-2 font-bold text-sm text-text3col">
+			<p className="text-text2col dark:text-text2col-dark">{desc}</p>
+			<div className="mt-auto flex gap-2 font-bold text-sm text-text3col dark:text-text3col-dark">
 				<p>{replies} replies</p>•
 				<p>Posted on {timestamp.toLocaleDateString()}</p>
 			</div>

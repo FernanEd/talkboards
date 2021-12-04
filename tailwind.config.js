@@ -1,28 +1,35 @@
 module.exports = {
 	purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-	darkMode: 'class', // or 'media' or 'class'
+	darkMode: 'class', // or 'media' or 'class',
+	mode: 'jit',
 	theme: {
-		colors: {
-			primary: {
-				DEFAULT: '#34A4C7',
-				dark: '#61C7E8',
-			},
-			textcol: {
-				DEFAULT: '#000000',
-				dark: '#AAAAAA',
-			},
-			text2col: {
-				DEFAULT: '#333333',
-				dark: '#DDDDDD',
-			},
-			text3col: {
-				DEFAULT: '#666666',
-				dark: '#AAAAAA',
-			},
-		},
 		extend: {
 			width: {
 				page: '700px',
+			},
+			colors: {
+				modalbg: '#8C9CA0',
+				primary: 'var(--primary-color)',
+				textcol: {
+					DEFAULT: '#000000',
+					dark: '#FFFFFF',
+				},
+				text2col: {
+					DEFAULT: '#333333',
+					dark: '#CCCCCC',
+				},
+				text3col: {
+					DEFAULT: '#666666',
+					dark: '#AAAAAA',
+				},
+				text4col: {
+					DEFAULT: '#999999',
+					dark: '#888888',
+				},
+				background: {
+					DEFAULT: '#FFFFFF',
+					dark: '#222222',
+				},
 			},
 		},
 	},

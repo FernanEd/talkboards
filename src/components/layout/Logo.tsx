@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Logo: React.FunctionComponent = ({}) => (
 	<div className="flex gap-1 items-center">
-		<h1 className="text-3xl">Talkboards</h1>
+		<h1 className="text-3xl text-textcol dark:text-textcol-dark">Talkboards</h1>
 		<svg
 			width="39"
 			height="33"
